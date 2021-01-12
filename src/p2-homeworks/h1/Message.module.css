@@ -1,0 +1,30 @@
+.message {
+    display: grid;
+    grid-template-columns: 1fr 1fr 8fr;
+    background-color: greenyellow;
+}
+
+.avatar {
+    padding: 10px;
+}
+
+.comment {
+    padding: 10px;
+    color: yellow;
+}
+
+.time {
+    padding-top: 65px;
+    padding-left: 10px;
+    color: rgba(0,0,0,0.5);
+}
+
+img {
+    height: 70px;
+    width: 70px;
+    border-radius: 30px;
+}
+
+.name {
+    color: blueviolet;
+}
