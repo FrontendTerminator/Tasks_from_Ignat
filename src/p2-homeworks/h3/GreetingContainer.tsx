@@ -22,7 +22,6 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = (props) => {
         if ( name.trim() !== "") {
             alert(`Hello ${name}!`)
             props.addUserCallback(name)
-            debugger
             totalUsers = totalUsers + 1
         } else {
             setError(" Error ")
