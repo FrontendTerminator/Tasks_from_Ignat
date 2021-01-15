@@ -7,7 +7,6 @@ export type UserType = {
     name: string
 }
 
-
 function HW3() {
     const [users, setUsers] = useState<Array<UserType>>([]); // need to fix any
 
