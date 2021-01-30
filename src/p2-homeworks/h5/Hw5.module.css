@@ -1,0 +1,32 @@
+.collapsed {
+    height: 60px;
+    width: 100%;
+    background-color: orange;
+    display: inline-block;
+}
+
+.btn {
+    display: inline-block;
+}
+
+.navlinks {
+    display: inline-block;
+    text-align: right;
+}
+
+.navlink {
+    display: inline-block;
+    margin-left: 30px;
+}
+
+.button {
+    background-color: #62D9FB;
+}
+
+.navlinkColor1 {
+    color: yellow;
+}
+
+.navlinkColor2 {
+    color: yellow;
+}
