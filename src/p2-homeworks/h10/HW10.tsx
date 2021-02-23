@@ -29,7 +29,7 @@ function HW10() {
             {/*should work (должно работать)*/}
             {loading
                 ? (
-                    <div><img src={gif}/></div>
+                    <div><img src={gif} alt={"gif"}/></div>
                 ) : (
                     <div>
                         <SuperButton onClick={setLoading}>set loading...</SuperButton>

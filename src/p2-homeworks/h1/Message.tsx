@@ -12,8 +12,7 @@ function Message(props: MessageType) {
     return (
         <div className={style.message}>
             <div className={style.avatar}>
-                <img src={props.avatar}/>
-            </div>
+             </div>
             <div className={style.comment}>
                 <div className={style.name}>{props.name}</div>
                 <div>{props.message}</div>

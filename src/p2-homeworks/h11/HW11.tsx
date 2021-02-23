@@ -1,10 +1,21 @@
 import React, {useState} from "react";
 import SuperRange from "./common/c7-SuperRange/SuperRange";
 import SuperDoubleRange from "./common/c8-SuperDoubleRange/SuperDoubleRange";
+import s from "./HW11.module.css"
 
 function HW11() {
     const [value1, setValue1] = useState(0);
-    const [value2, setValue2] = useState(100);
+    const [value2, setValue2] = useState([value1, 100]);
+
+    const onChangeRange = (value: number) => {
+        setValue1(value)
+        setValue2([value, value2[1]])
+    }
+    const onChangeRangeForSDR = (value: number | number[]) => {
+        let x: any = value
+        setValue1(x[0])
+        setValue2(value as [])
+    }
 
     return (
         <div>
@@ -15,16 +26,23 @@ function HW11() {
             <div>
                 <span>{value1}</span>
                 <SuperRange
+                    onChangeRange={onChangeRange}
+                    value1={value1}
                     // сделать так чтоб value1 изменялось
                 />
             </div>
 
-            <div>
-                <span>{value1}</span>
+            <div className={s.global}>
+                <div className={s.second}>{value1}</div>
+                <div className={s.second}>
                 <SuperDoubleRange
+                    onChangeRange={onChangeRange}
+                    onChangeRangeForSDR={onChangeRangeForSDR}
+                    value={value2}
                     // сделать так чтоб value1 и value2 изменялось
                 />
-                <span>{value2}</span>
+                </div>
+                <div className={s.second}>{value2[1]}</div>
             </div>
 
             <hr/>
