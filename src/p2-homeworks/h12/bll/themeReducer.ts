@@ -1,14 +1,27 @@
-const initState = {
-
+const initState: ThemeReducerType = {
+    theme: "dark"
 };
+type ThemeReducerType = {
+    theme: string
+}
+type ThemeReducerActionType = ChangeThemeCType
 
-export const themeReducer = (state = initState, action: any): any => { // fix any
+export const themeReducer = (state = initState, action: ThemeReducerActionType): ThemeReducerType => { // fix any
     switch (action.type) {
-        case "": {
-            return state;
+        case "CHANGE-THEME": {
+            return {
+                ...state,
+                theme: action.nameTheme
+            };
         }
         default: return state;
     }
 };
 
-export const changeThemeC = (): any => {}; // fix any
+type ChangeThemeCType = {
+    type: "CHANGE-THEME"
+    nameTheme: string
+}
+export const changeThemeC = (nameTheme: string): ChangeThemeCType => {
+    return {type: "CHANGE-THEME", nameTheme}
+}; // fix any
